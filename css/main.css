@@ -1,0 +1,319 @@
+/*@font-face {
+  font-family: system;
+  font-style: bold;
+  font-weight: 700;
+  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+}
+*/
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #3b3b3b;
+  background-image: url('../img/grey_background.png');
+  background-repeat: repeat;
+}
+
+.headericon {
+  display: relative;
+  height: 0px;
+  width: 10%;
+  background-color: #444;
+  font-family: 'RobotoRegular', 'Droid Sans', sans-serif;
+  font-weight: bold;
+  text-align: right;
+  padding: 0px;
+}
+
+
+.headertekst {
+  display: relative;
+  height: 25px;
+  width: 90%;
+  background-color: #444;
+  font-family: 'RobotoRegular', 'Droid Sans', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+}
+
+.timerBarWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  height: 24px;
+}
+
+.timerBarWrapper2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  height: 24px;
+}
+
+.timerBarWrapper {
+  /*border: solid 1px #ff0000;*/
+  zoom: 1;
+  /* IE6&7 */
+}
+
+.timerBarWrapper:before,
+.timerBarWrapper:after {
+  content: "";
+  display: table;
+}
+
+.timerBarWrapper:after {
+  clear: both;
+}
+
+.timerBarWrapper2 {
+  /*border: solid 1px #ff0000;*/
+  zoom: 1;
+  /* IE6&7 */
+}
+
+.timerBarWrapper2:before,
+.timerBarWrapper2:after {
+  content: "";
+  display: table;
+}
+
+.timerBarWrapper2:after {
+  clear: both;
+}
+
+.timerBackspace {
+  width: 24px;
+  height: 24px;
+  margin: auto;
+  cursor: pointer;
+}
+
+.timerBarBG {
+  position: relative;
+  border-radius: 8px;
+  background-color: #222;
+  width: 80%;
+  height: 8px;
+  display: block;
+  padding: 5px;
+  padding-left: 6px;
+  padding-right: 6px;
+  border: 1px solid #222;
+  border-left-color: #444;
+  border-bottom-color: #444;
+  text-align: center;
+}
+
+.timerBarBG2 {
+  border-radius: 8px;
+  background-color: #222;
+  width: 20%;
+  height: 8px;
+  padding: 5px;
+  padding-left: 6px;
+  padding-right: 6px;
+  border: 1px solid #222;
+  border-left-color: #444;
+  border-bottom-color: #444;
+  text-align: center;
+}
+
+.timerBar {
+  position: relative;
+  border-radius: 4px;
+  background-color: #42dd03;
+  border: 1px solid #88e65e;
+  border-right-color: #42dd03;
+  border-bottom-color: #275f0d;
+  width: 100%;
+  height: 6px;
+  display: block;
+  visibility: visible;
+}
+
+.timerBar2 {
+  position: relative;
+  border-radius: 4px;
+  background-color: #dd4203;
+  border: 1px solid #e6885e;
+  border-right-color: #dd4203;
+  border-bottom-color: #5f270d;
+  width: 100%;
+  height: 6px;
+  display: block;
+}
+
+.timerText {
+  position: relative;
+  top: 18px;
+  left: calc(100% - 27px);
+  width: 60px;
+  height: 25px;
+  padding: 0px;
+  background: #444;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  border: #222 solid 3px;
+  color: #42dd03;
+  font-family: 'RobotoRegular', 'Droid Sans', sans-serif;
+  font-weight: bold;
+  /*font-family: system;
+   font-family: 'Baloo Bhaijaan', cursive;*/
+  text-align: center;
+}
+
+.timerText:after {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 0 4px 11px;
+  border-color: #444 transparent;
+  display: block;
+  width: 0;
+  z-index: 1;
+  top: -10px;
+  left: 22px;
+}
+
+.timerText:before {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 0 7px 13px;
+  border-color: #222 transparent;
+  display: block;
+  width: 0;
+  z-index: 0;
+  top: -14px;
+  left: 19px;
+}
+
+.timerText2 {
+  position: relative;
+  top: 18px;
+  left: calc(100% - 27px);
+  width: 60px;
+  height: 25px;
+  padding: 0px;
+  background: #444;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  border: #222 solid 3px;
+  color: #dd4203;
+  font-family: 'RobotoRegular', 'Droid Sans', sans-serif;
+  font-weight: bold;
+  /*font-family: system;
+   font-family: 'Baloo Bhaijaan', cursive;*/
+  text-align: center;
+  visibility: visible;
+}
+
+.timerText2:after {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 0 4px 11px;
+  border-color: #444 transparent;
+  display: block;
+  width: 0;
+  z-index: 1;
+  top: -10px;
+  left: 22px;
+}
+
+.timerText2:before {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 0 7px 13px;
+  border-color: #222 transparent;
+  display: block;
+  width: 0;
+  z-index: 0;
+  top: -14px;
+  left: 19px;
+}
+
+#addTimerButton {
+  position: relative;
+  background-color: #444;
+  border: 4px solid #222;
+  border-radius: 6px;
+  color: #42dd03;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: 'RobotoRegular', 'Droid Sans', sans-serif;
+  font-weight: bold;
+  /*font-family: system;
+   font-family: 'Baloo Bhaijaan', cursive;*/
+  font-size: 18px;
+  cursor: pointer;
+}
+
+#thisIsMeNow {
+  position: relative;
+  background-color: #444;
+  border: 4px solid #222;
+  border-radius: 6px;
+  color: #42dd03;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: 'RobotoRegular', 'Droid Sans', sans-serif;
+  /*font-family: system;
+   font-family: 'Baloo Bhaijaan', cursive;*/
+  font-size: 18px;
+}
+
+.spacer {
+  height: 60px;
+}
+
+.spacer2 {
+  width: 60%;
+}
+
+#timerText01,
+#timerText02,
+#timerText03,
+#timerText04,
+#timerText05,
+#timerBar01,
+#timerBar02,
+#timerBar03,
+#timerBar04,
+#timerBar05,
+#timerBackspace01,
+#timerBackspace02,
+#timerBackspace03,
+#timerBackspace04,
+#timerBackspace05 {
+  visibility: hidden;
+}
+
+.copyright {
+  position: relative;
+  width: 90%;
+  color: #42dd03;
+  padding: 5px 10px;
+  font-size: 9pt;
+  text-align: right;
+  text-decoration: none;
+  display: inline-block;
+  font-family: 'RobotoRegular', 'Droid Sans', sans-serif; 
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Nicorette Quickmist</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <!-- <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan" rel="stylesheet"> -->
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <div class="headericon"><img src="icon.png" width="40px"></div>
+    <div class="headertekst">Quickmist Timers</div>
+<br>
+    <div class="timerBarWrapper">
+        <div class="timerBarBG">
+            <div class="timerBar" id="timerBar01"></div>
+            <div class="timerText" id="timerText01">60:00</div>
+        </div>
+        <div class="timerBackspace" id="timerBackspace01" onclick="removeTimer(1);">
+            <img src="img/backspace.gif" width="24px">
+        </div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="timerBarWrapper">
+        <div class="timerBarBG">
+            <div class="timerBar" id="timerBar02"></div>
+            <div class="timerText" id="timerText02">60:00</div>
+        </div>
+        <div class="timerBackspace" id="timerBackspace02" onclick="removeTimer(2);">
+            <img src="img/backspace.gif" width="24px">
+        </div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="timerBarWrapper">
+        <div class="timerBarBG">
+            <div class="timerBar" id="timerBar03"></div>
+            <div class="timerText" id="timerText03">60:00</div>
+        </div>
+        <div class="timerBackspace" id="timerBackspace03" onclick="removeTimer(3);">
+            <img src="img/backspace.gif" width="24px">
+        </div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="timerBarWrapper">
+        <div class="timerBarBG">
+            <div class="timerBar" id="timerBar04"></div>
+            <div class="timerText" id="timerText04">60:00</div>
+        </div>
+        <div class="timerBackspace" id="timerBackspace04" onclick="removeTimer(4);">
+            <img src="img/backspace.gif" width="24px" height="24px">
+        </div>
+    </div>
+
+    <div class="spacer"></div>
+
+    <div class="timerBarWrapper2">
+        <div class="spacer2"></div>
+        <div class="timerBarBG2">
+            <div class="timerBar2" id="timerBar05"></div>
+            <div class="timerText2" id="timerText05">60:00</div>
+        </div>
+        <div class="timerBackspace" id="timerBackspace05" onclick="removeTimer(5);">
+            <img src="img/backspace.gif" width="24px" height="24px">
+        </div>
+    </div>
+
+    <button id="addTimerButton" onclick="timerAddStart();">Hit me</button>
+
+    <a href="https://www.jarling.no/"><div class="copyright">Kent©2018, www.jarling.no</div></a>
+    
+</body>
+
+</html>
