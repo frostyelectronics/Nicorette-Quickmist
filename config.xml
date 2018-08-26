@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="no.jarling.quickmist" version="0.0.2" versionCode="20" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="no.jarling.quickmist" version="0.0.3" versionCode="30" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Nicorette Quickmist</name>
     <description>
       4x60minute timers and 1x15minute timer for keeping track of Nicorette Quickmist
   </description>
-    <author email="4dagoth@gmail.com" href="https://www.jarling.no">
-      For Dagoth
+    <author email="kent@jarling.no" href="https://www.jarling.no">
+      Kent
   </author>
     <icon height="96" src="icon.png" width="96" />
 </widget>
