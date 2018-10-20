@@ -1,19 +1,48 @@
 var varTimersActive = 0;
 var arr60Timers = [0, 0, 0, 0];
 var var15Timer = 0;
+locStorageGet();
+actDeactTimers();
 
 function timerAddStart() {
     addOneTimer();
     if (varTimersActive === 0) {
         var varTimerInterval = setInterval(varTimer, 200);
     }
+    
+}
+
+function pageLoad() {
+    if (varTimersActive === 0) {
+        var varTimerInterval = setInterval(varTimer, 200);
+    }
+}
+
+function locStorageSet() {
+    sortTimers();
+    localStorage.setItem('arr60Timers00', arr60Timers[0]);
+    localStorage.setItem('arr60Timers01', arr60Timers[1]);
+    localStorage.setItem('arr60Timers02', arr60Timers[2]);
+    localStorage.setItem('arr60Timers03', arr60Timers[3]);
+    localStorage.setItem('arr15Timer', var15Timer);
+}
+
+function locStorageGet() {
+    sortTimers();
+    arr60Timers[0] = parseInt(localStorage.getItem('arr60Timers00'),10);
+    arr60Timers[1] = parseInt(localStorage.getItem('arr60Timers01'),10);
+    arr60Timers[2] = parseInt(localStorage.getItem('arr60Timers02'),10);
+    arr60Timers[3] = parseInt(localStorage.getItem('arr60Timers03'),10);
+    var15Timer = parseInt(localStorage.getItem('arr15Timer'),10);
 }
 
 function addOneTimer() {
     arr60Timers[3] = Date.now() + 3600000;
     var15Timer = Date.now() + 900000;
     actDeactTimers();
+    locStorageSet();
 }
+
 
 function visHidTimers(numb, visibi) {
     document.getElementById("timerText0" + numb + "").style.visibility = "" + visibi + "";
@@ -55,11 +84,13 @@ function checkTimers() {
         if (Date.now() > arr60Timers[i]) {
             arr60Timers[i] = 0;
             actDeactTimers();
+            locStorageSet();
         }
     }
     if (Date.now() > var15Timer) {
         var15Timer = 0;
         actDeactTimers();
+        locStorageSet();
     }
 }
 
@@ -70,6 +101,7 @@ function removeTimer(numb) {
         arr60Timers[numb - 1] = 0;
     }
     actDeactTimers();
+    locStorageSet();
 }
 
 function round(value, precision) {
@@ -82,9 +114,9 @@ function msToPercent(futureMillis, totMinutes, precision) {
 }
 
 function varTimer() {
+    locStorageGet();
     varTimersActive = 1;
     checkTimers();
-
     for (i = 0; i < 4; i++) {
         if (arr60Timers[i] !== 0) {
             document.getElementById("timerBar0" + (i + 1) + "").style.width = msToPercent(arr60Timers[i], 60, 1) + "%";
